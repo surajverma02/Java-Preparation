@@ -6,7 +6,7 @@
 
 <p>This repository contains a collection of Java code examples, explanations, and resources to add in your preparation. Whether you're a beginner looking to learn Java or an experienced developer brushing up on your skills, you'll find valuable content here.</p>
 
-<h2>Topics Covered</h2>
+<h2>Topics Covering</h2>
 
 <ul>
         <li><strong>Core Java Concepts:</strong> Basic Java syntax, data types, control flow, and object-oriented programming principles.</li>
