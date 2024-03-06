@@ -12,7 +12,9 @@ public class BubbleSort {
         System.out.println(result);
     }
 
+    // Selection Sort
     public static int[] bubbleSort(int[] arr){
+        // loop for the checking number for the sweaping
         for(int i=0; i<arr.length-1; i++){
             for(int j=0; j<arr.length-1-i;j++){
                 
