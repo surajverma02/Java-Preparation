@@ -1,28 +1,24 @@
 package multithreading;
 import java.lang.Thread;
 
-class ThreadA extends Thread{
+class ThreadTestA extends Thread{
     public void run(){
-
         System.out.println(Thread.currentThread());
-        System.out.println("HI");
+        System.out.println("Hi");
     }
 }
 
-class ThreadB extends Thread{
+class ThreadTestB extends Thread{
     public void run(){
 
         for(int j=1; j<=3; j++){
             System.out.println("\tFrom Thread B : j = " + j);
-            if(j==3){
-                // stop();
-            }
         }
         System.out.println("Exit from B ");
     }
 }
 
-class ThreadC extends Thread{
+class ThreadTestC extends Thread{
     public void run(){
 
         for(int k=1; k<=3; k++){
@@ -32,7 +28,7 @@ class ThreadC extends Thread{
                     sleep(10000);
                 }
                 catch(Exception e){
-
+                    System.out.println("Exception occurred");
                 }
                 
             }
@@ -43,20 +39,20 @@ class ThreadC extends Thread{
 
 public class ThreadMethods {
     public static void main(String[] args) {
-        
-        ThreadA A = new ThreadA();
-        ThreadB B = new ThreadB();
-        ThreadC C = new ThreadC();
 
-        System.out.println("Strating Thread A");
+        ThreadTestA A = new ThreadTestA();
+        ThreadTestB B = new ThreadTestB();
+        ThreadTestC C = new ThreadTestC();
+
+        System.out.println("Starting Thread A");
         System.out.println(A.getState());
         A.start();
         System.out.println(A.getState());
-        System.out.println("Strating Thread B");
+        System.out.println("Starting Thread B");
         System.out.println(B.getState());
         B.start();
         System.out.println(B.getState());
-        System.out.println("Strating Thread C");
+        System.out.println("Starting Thread C");
         System.out.println(C.getState());
         C.start();
         System.out.println(C.getState());
