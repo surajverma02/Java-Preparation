@@ -1,0 +1,70 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ThreadMethods",
+            "request": "launch",
+            "mainClass": "multithreading.ThreadMethods",
+            "projectName": "Java_624f634b"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "TestPackage",
+            "request": "launch",
+            "mainClass": "TestPackage",
+            "projectName": "Java_624f634b"
+        },
+        {
+            "type": "java",
+            "name": "BitManipulation",
+            "request": "launch",
+            "mainClass": "bitmanipulation.BitManipulation",
+            "projectName": "Java_624f634b"
+        },
+        {
+            "type": "java",
+            "name": "TestInterface",
+            "request": "launch",
+            "mainClass": "interference.TestInterface",
+            "projectName": "Java_624f634b"
+        },
+        {
+            "type": "java",
+            "name": "ThreadCheck",
+            "request": "launch",
+            "mainClass": "multithreading.ThreadCheck",
+            "projectName": "Java_624f634b"
+        },
+        {
+            "type": "java",
+            "name": "TestClass1",
+            "request": "launch",
+            "mainClass": "myPackage.TestClass1",
+            "projectName": "Java_624f634b"
+        },
+        {
+            "type": "java",
+            "name": "BubbleSort",
+            "request": "launch",
+            "mainClass": "sorting.BubbleSort",
+            "projectName": "Java_624f634b"
+        },
+        {
+            "type": "java",
+            "name": "SelectionSort",
+            "request": "launch",
+            "mainClass": "sorting.SelectionSort",
+            "projectName": "Java_624f634b"
+        }
+    ]
+}
