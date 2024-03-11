@@ -5,7 +5,8 @@ import java.util.ArrayList;
 /** Implementing Arraylist without using the Generics Concept */
 
 public class ArrayListTest {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
 //      define ArrayList object
         ArrayList obj = new ArrayList();

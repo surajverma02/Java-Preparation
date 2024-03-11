@@ -8,7 +8,7 @@ interface InnerTestInterface {
 public class TestInterface {
     public static void main(String[] args) {
         Test1 obj = new Test1();
-        obj.nameDisplay("Rohit");
+        obj.nameDisplay("Raj");
         System.out.println("Author's name is: " + InnerTestInterface.author);
     }
 

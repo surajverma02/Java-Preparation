@@ -8,7 +8,7 @@ public class TestPackage{
         TestClass2 tc2 = new TestClass2();
 
         /*
-        NOTE: as a java file is has only one public class so other classes arenot visible outside the package
+        NOTE: as a java file is having only one public class so other classes aren't visible outside the package
          */
         // InnerTestClass1 itc1 = new InnerTestClass1();
 
