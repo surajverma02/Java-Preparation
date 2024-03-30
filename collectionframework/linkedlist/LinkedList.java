@@ -231,6 +231,102 @@ public class LinkedList {
         return true;
     }
 
+//    Sort the Linked List using the MergeSort Algorithm
+    public Node mergeSort(Node head){
+        if(head == null || head.next == null){
+            return head;
+        }
+
+        // middle node of ll
+        Node slow = head;
+        Node fast = head.next;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        Node mid = slow;
+
+        // divide and apply merge sort
+        Node rightHead = mid.next;
+        mid.next = null;
+
+        Node left = mergeSort(head);
+        Node right = mergeSort(rightHead);
+
+        // merge the linked list
+        Node mergedLL = new Node(-1); //dummy Node
+        Node temp = mergedLL;
+
+        while(left != null && right != null){
+            if(left.data <= right.data){
+                temp.next = left;
+                left = left.next;
+                temp = temp.next;
+            }
+            else {
+                temp.next = right;
+                right = right.next;
+                temp = temp.next;
+            }
+        }
+
+        while(left != null){
+            temp.next = left;
+            left = left.next;
+            temp = temp.next;
+        }
+
+        while(right != null){
+            temp.next = right;
+            right = right.next;
+            temp = temp.next;
+        }
+
+        return mergedLL.next;
+    }
+
+//    Zig-Zag Linked list
+    public void zigZag(){
+        // middle node of the linked list
+        Node slow = head;
+        Node fast = head.next;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        Node mid = slow;
+
+        // Reverse 2nd half
+        Node curr = mid.next;
+        mid.next = null;
+
+        Node prev = null;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        Node right = prev;
+        Node left = head;
+        Node nextL, nextR;
+
+        //alternating merging to make zigzag linked list
+        while (left != null && right != null){
+            nextL = left.next;
+            left.next = right;
+            nextR = right.next;
+            right.next = nextL;
+
+            left = nextL;
+            right = nextR;
+        }
+    }
 
 
 //    Main method to run the code
@@ -239,31 +335,18 @@ public class LinkedList {
         LinkedList ll = new LinkedList();
 
 //      Add element in the linked list
-        ll.addFirst(1);
-        ll.addFirst(2);
-        ll.addLast(2);
-        ll.addLast(1);
-        ll.addLast(8);
-        ll.addLast(1);
-        ll.addLast(2);
-        ll.add(2,9);
-        ll.add(0,10);
-        ll.add(5,10);
-        ll.removeLast();
-        ll.removeFirst();
-        System.out.println(size);
-        int searchedElement = ll.recSearch(10);
-        System.out.println("Index is :"+searchedElement);
-        searchedElement = ll.itrSearch(10);
-        System.out.println("Index is :"+searchedElement);
-        ll.deleteNode(2);
-        ll.deleteNthNodeEnd(2);
-        ll.reverse();
+        ll.addFirst(31);
+        ll.addFirst(22);
+        ll.addLast(42);
+        ll.addLast(10);
+        ll.addLast(80);
+        ll.addLast(17);
+        ll.addLast(52);
+
 
 //      Print the linked list
         ll.print();
-
-        System.out.println(ll.checkPalindrome());
-
+        ll.zigZag();
+        ll.print();
     }
 }
